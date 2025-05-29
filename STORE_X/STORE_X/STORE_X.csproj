@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA196D27-2815-4DE0-AD82-F59A8DED42EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>STORE_X</RootNamespace>
+    <AssemblyName>STORE_X</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection_Database.cs" />
+    <Compile Include="Ctrl\Customers_BLL.cs" />
+    <Compile Include="Ctrl\Employees_BLL.cs" />
+    <Compile Include="Ctrl\Products_BLL.cs" />
+    <Compile Include="Ctrl\Receipt_BLL.cs" />
+    <Compile Include="Ctrl\User_BLL.cs" />
+    <Compile Include="DAL\User_DAL.cs" />
+    <Compile Include="DatabaseStore.cs" />
+    <Compile Include="frmLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOGIN.Designer.cs">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Seller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Seller.Designer.cs">
+      <DependentUpon>frmMain_Seller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Warehouse.Designer.cs">
+      <DependentUpon>frmMain_Warehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmORDER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmORDER.Designer.cs">
+      <DependentUpon>frmORDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPRODUCTS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRODUCTS.Designer.cs">
+      <DependentUpon>frmPRODUCTS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterForm.Designer.cs">
+      <DependentUpon>frmRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSTATISTICSMANAGER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSTATISTICSMANAGER.Designer.cs">
+      <DependentUpon>frmSTATISTICSMANAGER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Employees_DAL.cs" />
+    <Compile Include="DAL\Products_DAL.cs" />
+    <Compile Include="DAL\Receipt_DAL.cs" />
+    <Compile Include="DAL\StatisticsManager_DAL.cs" />
+    <Compile Include="Object\Customer.cs" />
+    <Compile Include="DAL\Customers_DAL.cs" />
+    <Compile Include="frmCUSTOMERS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCUSTOMERS.Designer.cs">
+      <DependentUpon>frmCUSTOMERS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEMPLOYEES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEMPLOYEES.Designer.cs">
+      <DependentUpon>frmEMPLOYEES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Admin.Designer.cs">
+      <DependentUpon>frmMain_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseLogin.cs" />
+    <Compile Include="Object\Employee.cs" />
+    <Compile Include="Object\Product.cs" />
+    <Compile Include="Object\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="store_X.cs">
+      <DependentUpon>store_X.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="store_X.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>store_X.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmCUSTOMERS.resx">
+      <DependentUpon>frmCUSTOMERS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEMPLOYEES.resx">
+      <DependentUpon>frmEMPLOYEES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLOGIN.resx">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_Admin.resx">
+      <DependentUpon>frmMain_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_Seller.resx">
+      <DependentUpon>frmMain_Seller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmORDER.resx">
+      <DependentUpon>frmORDER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRODUCTS.resx">
+      <DependentUpon>frmPRODUCTS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterForm.resx">
+      <DependentUpon>frmRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSTATISTICSMANAGER.resx">
+      <DependentUpon>frmSTATISTICSMANAGER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="store_X.xsc">
+      <DependentUpon>store_X.xsd</DependentUpon>
+    </None>
+    <None Include="store_X.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>store_X.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="store_X.xss">
+      <DependentUpon>store_X.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
